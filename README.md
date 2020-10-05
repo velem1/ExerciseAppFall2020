@@ -1,5 +1,24 @@
-# ExerciseAppFall2020
+# exercise-app-fall2020
 
-# Technologies using
+## Project setup
+```
+npm install
+```
 
-Bulma, Node, JS
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
