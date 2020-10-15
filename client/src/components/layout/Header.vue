@@ -1,14 +1,11 @@
 <template>
   <nav class="navbar has-background-danger-light">
     <div class="navbar-brand">
-      <div
-        class="navbar-burger burger"
-        data-target="navbarExampleTransparentExample"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     </div>
 
     <div id="navbarExampleTransparentExample" class="navbar-menu">
@@ -28,9 +25,9 @@
             <router-link to="/contact" >
               <a class="navbar-item">Contact Creator</a>
             </router-link>
-            <a class="navbar-item">
-              Feedback
-            </a>
+            <router-link to="/feedback" >
+              <a class="navbar-item">Feedback</a>
+            </router-link>
             <hr class="navbar-divider" />
             <router-link to="/admin" >
               <a class="navbar-item">Admin</a>

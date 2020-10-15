@@ -6,6 +6,7 @@
         An app to track your yoga exercise and share your progress with your
         friends!
       </h2>
+      
       <div class="notification has-background-grey-lighter">
         <p>
           <i class="fas fa-arrow-right"></i>Choose your type of yoga pose,
