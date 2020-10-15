@@ -25,16 +25,16 @@
             More
           </a>
           <div class="navbar-dropdown is-boxed">
-            <a class="navbar-item">
-              <router-link to="/contact">Contact Creator</router-link>
-            </a>
+            <router-link to="/contact" >
+              <a class="navbar-item">Contact Creator</a>
+            </router-link>
             <a class="navbar-item">
               Feedback
             </a>
             <hr class="navbar-divider" />
-            <a class="navbar-item">
-              <router-link to="/admin">Admin</router-link>
-            </a>
+            <router-link to="/admin" >
+              <a class="navbar-item">Admin</a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -43,24 +43,28 @@
         <div class="navbar-item">
           <div class="field is-grouped">
             <p class="control">
+              <router-link to="/login">
               <a class="bd-tw-button button" target="_blank">
                 <span class="icon">
                   <i class="fas fa-sign-in-alt"></i>
                 </span>
                 <span>
-                  <router-link to="/login">Log In</router-link>
+                  Log In
                 </span>
               </a>
+              </router-link>
             </p>
             <p class="control">
+              <router-link to="/signup">
               <a class="bd-tw-button button" target="_blank">
                 <span class="icon">
                   <i class="fas fa-user-plus"></i>
                 </span>
                 <span>
-                  <router-link to="/signup">Sign Up</router-link>
+                  Sign Up
                 </span>
               </a>
+              </router-link>
             </p>
           </div>
         </div>

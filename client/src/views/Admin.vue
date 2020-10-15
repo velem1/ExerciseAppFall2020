@@ -7,7 +7,12 @@
           Below is a list of current users and their secured information.
         </h2>
         <div class="notification has-background-grey">
-          <h1><strong>Users</strong></h1>
+          <h1 class="title"><strong>Users</strong></h1>
+
+          <div class="title">
+          <button class="button"><i class="fas fa-user-plus"></i>Add User</button>
+          </div>
+
           <div class="notification has-background-grey-lighter">
             <p>
               User ID: #1 <br />
@@ -15,6 +20,8 @@
               Email: supernova@gmail.com <br />
               Password: #fdns23q2rnhr43
             </p>
+            
+            <small><a class="has-text-info"><i class="fas fa-edit"></i>Edit</a> · <a class="has-text-danger"><i class="fas fa-trash-alt"></i>Delete</a> </small>
           </div>
           <div class="notification has-background-grey-lighter">
             <p>
@@ -23,6 +30,7 @@
               Email: galaxymeteor@gmail.com <br />
               Password: #adns32awrghr2dv
             </p>
+            <small><a class="has-text-info"><i class="fas fa-edit"></i>Edit</a> · <a class="has-text-danger"><i class="fas fa-trash-alt"></i>Delete</a> </small>
           </div>
           <div class="notification has-background-grey-lighter">
             <p>
@@ -31,6 +39,7 @@
               Email: plutomars@gmail.com <br />
               Password: #plcs32sd3sm59
             </p>
+            <small><a class="has-text-info"><i class="fas fa-edit"></i>Edit</a> · <a class="has-text-danger"><i class="fas fa-trash-alt"></i>Delete</a> </small>
           </div>
           <div class="notification has-background-grey-lighter">
             <p>
@@ -39,6 +48,7 @@
               Email: saturnstars@gmail.com <br />
               Password: #sdc43uui7aef6
             </p>
+            <small><a class="has-text-info"><i class="fas fa-edit"></i>Edit</a> · <a class="has-text-danger"><i class="fas fa-trash-alt"></i>Delete</a> </small>
           </div>
           <div class="notification has-background-grey-lighter">
             <p>
@@ -47,6 +57,7 @@
               Email: oceanmercury@gmail.com <br />
               Password: #vbe3se56vsb431vse
             </p>
+            <small><a class="has-text-info"><i class="fas fa-edit"></i>Edit</a> · <a class="has-text-danger"><i class="fas fa-trash-alt"></i>Delete</a> </small>
           </div>
         </div>
       </div>
