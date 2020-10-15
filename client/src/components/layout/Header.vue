@@ -33,7 +33,7 @@
             </a>
             <hr class="navbar-divider" />
             <a class="navbar-item">
-              Admin
+              <router-link to="/admin">Admin</router-link>
             </a>
           </div>
         </div>
