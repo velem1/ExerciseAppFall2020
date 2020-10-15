@@ -28,9 +28,12 @@
             <a class="navbar-item">
               <router-link to="/contact">Contact Creator</router-link>
             </a>
-            <hr class="navbar-divider" />
             <a class="navbar-item">
               Feedback
+            </a>
+            <hr class="navbar-divider" />
+            <a class="navbar-item">
+              Admin
             </a>
           </div>
         </div>
