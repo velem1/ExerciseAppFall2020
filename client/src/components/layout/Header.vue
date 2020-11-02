@@ -1,14 +1,14 @@
 <template>
   <nav class="navbar has-background-danger-light">
     <div class="navbar-brand">
-      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+      <a role="button" class="navbar-burger burger" :class="{ 'is-active': isActive }" @click="isActive = !isActive" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
 
-    <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div id="navbarExampleTransparentExample" class="navbar-menu"  :class="{ 'is-active': isActive }">
       <div class="navbar-start">
         <div class="navbar-item">
           <i class="fas fa-balance-scale"></i>
@@ -73,5 +73,8 @@
 <script>
 export default {
   name: "Header",
+  data: ()=> ({
+      isActive: false
+  }),
 };
 </script>
