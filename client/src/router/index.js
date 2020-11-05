@@ -57,6 +57,13 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "feedback" */ "../views/Feedback.vue"),
   },
+  {
+    path: "/addexercise",
+    name: "AddExercise",
+
+    component: () =>
+      import(/* webpackChunkName: "addexercise" */ "../views/AddExercise.vue"),
+  },
 ];
 
 const router = createRouter({
