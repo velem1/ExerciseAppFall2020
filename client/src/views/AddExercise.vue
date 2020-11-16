@@ -21,21 +21,7 @@
             </div>
           </div>
         </div>
-        <div class="field">
-          <label class="label">Yoga Difficulty</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option>Beginner</option>
-                <option>Beginner-Intermediate</option>
-                <option>Intermediate</option>
-                <option>Intermediate-Advanced</option>
-                <option>Advanced</option>
-                <option>Instructor</option>
-              </select>
-            </div>
-          </div>
-        </div>
+    
         <div class="field">
           <label class="label">Pose(s)</label>
           <div class="control">
@@ -64,7 +50,7 @@
         </div>
         <div class="field">
           <div class="control">
-            <button class="button is-link">Submit</button>
+            <button onclick="alert();" class="button is-link">Submit</button>
           </div>
         </div>
       </div>

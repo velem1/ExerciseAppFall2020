@@ -2,7 +2,23 @@
   <div>
     <div class="field">
       <p class="control has-icons-left">
-        <input class="input" type="name" placeholder="Name" />
+        <input class="input" type="firstName" placeholder="First Name" />
+        <span class="icon is-small is-left">
+          <i class="fas fa-pencil-alt"></i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control has-icons-left">
+        <input class="input" type="lastName" placeholder="Last Name" />
+        <span class="icon is-small is-left">
+          <i class="fas fa-pencil-alt"></i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control has-icons-left">
+        <input class="input" type="dob" placeholder="Date Of Birth" />
         <span class="icon is-small is-left">
           <i class="fas fa-pencil-alt"></i>
         </span>
@@ -27,16 +43,10 @@
         </span>
       </p>
     </div>
-    <div class="field">
-      <p class="control has-icons-left">
-        <input class="input" type="password" placeholder="Confirm Password" />
-        <span class="icon is-small is-left">
-          <i class="fas fa-lock"></i>
-        </span>
-      </p>
-    </div>
     <div class="control">
       <button class="button has-background-link-light">Submit</button>
     </div>
   </div>
 </template>
+
+export
