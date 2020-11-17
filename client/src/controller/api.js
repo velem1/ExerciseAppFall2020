@@ -1,16 +1,13 @@
 const axios = require('axios');
 const backend_url = "http://localhost:3003"; // has to be same as backend server
-
 export function login(email, password){
   try {
-    axios.get(backend_url+"/login", {headers: {'email': email, 'password': password}}).then(function (response) {
-      return response;
-
-    })
+     return axios.get(backend_url+"/login", {headers: {'email': email, 'password': password}});
+     //
   } catch (error) {
-    console.log(error)
+      console.log(error)
   }
-    
+
 }
 
 export function signup(name, email, password){

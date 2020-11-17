@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "backend": "server/index.js"
+    "backend": "node ../server/index.js"
   },
   "dependencies": {
     "axios": "^0.21.0",

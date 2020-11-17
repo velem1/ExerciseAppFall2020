@@ -41,13 +41,15 @@ export default {
   },
   methods: {
     loginSubmit: function () {
-      if(api.login(this.email, this.password)){
-        alert('logged in');
-      }
-      else{
-        alert('user not found');
-      }
-    }
+      api.login(this.email, this.password).then(function (response) {
+        //return response;
+        if (response) {
+          alert("logged in");
+        } else {
+          alert("user not found");
+        }
+      });
+    },
   }
 }
 </script>
