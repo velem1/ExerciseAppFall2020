@@ -10,12 +10,10 @@ export function login(email, password){
 
 }
 
-export function signup(name, email, password){
+export function signup(firstName, lastName, dob, email, password){
   try {
-    "http://localhost:3003/signup"
-    axios.post(backend_url+ "/signup", {headers: {'name': name, 'email': email, 'password': password}}).then(function (response) {
-      console.log(response.data);
-    });
+    //"http://localhost:3003/signup"
+    return axios.post(backend_url+ "/signup", {headers: {'firstName': firstName, 'lastName':lastName, 'dob':dob, 'email': email, 'password': password}})
   } catch (error) {
         console.log(error)
   }

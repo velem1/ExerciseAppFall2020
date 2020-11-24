@@ -43,7 +43,7 @@ export default {
     loginSubmit: function () {
       api.login(this.email, this.password).then(function (response) {
         //return response;
-        if (response) {
+        if (response.data) {
           alert("logged in");
         } else {
           alert("user not found");
