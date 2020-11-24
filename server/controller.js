@@ -30,12 +30,21 @@ app.get('/signup', function(request, response){
   let email = request.get('email');
   let password = request.get('password');
 
-  let buildQuery = "INSERT INTO 'EX_Fall_2020_Users` (firstName, lastName, dob, email, password) VALUES(" + firstName + "," + lastName + "," + dob + "," + email + "," + password ; //inserts a row into specified table
+  let buildQuery = "SELECT * FROM `EX_Fall_2020_Users` WHERE email = '" + email + "' AND password = '" + password + "'"; //inserts a row into specified table
   let result = db.queryDatabase(buildQuery).then(function(dbResult)
   {
-    if(dbResult.length > 0){
-      console.log(dbResult)
-      response.send(true);
+    if(dbResult.length == 0){
+      let buildQuery = "INSERT INTO 'EX_Fall_2020_Users` (firstName, lastName, dob, email, password) VALUES('" + firstName + "','" + lastName + "'," + dob + ",'" + email + "','" + password+"'" ;
+      let result = db.queryDatabase(buildQuery).then(function(dbResult)
+      {
+        if(dbResult.affectedRows > 0){ //means that a row was made. value should be 1
+          //console.log(dbResult)
+          response.send(true);  //send true meaning success
+        }
+        else{
+          response.send(false);
+        }
+      });
     }
     else{
       response.send(false);
