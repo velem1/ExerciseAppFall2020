@@ -24,18 +24,18 @@ app.get('/login', function(request, response){  //we have connection between fro
 })
 
 app.get('/signup', function(request, response){
-  let firstName = request.get('firstName');
-  let lastName = request.get('lastName');
-  let dob = request.get('dob');
+  let FirstName = request.get('FirstName');
+  let LastName = request.get('LastName');
   let email = request.get('email');
   let password = request.get('password');
 
   let buildQuery = "SELECT * FROM `EX_Fall_2020_Users` WHERE email = '" + email + "' AND password = '" + password + "'"; //inserts a row into specified table
-  let result = db.queryDatabase(buildQuery).then(function(dbResult)
+  db.queryDatabase(buildQuery).then(function(dbResult)
   {
     if(dbResult.length == 0){
-      let buildQuery = "INSERT INTO 'EX_Fall_2020_Users` (firstName, lastName, dob, email, password) VALUES('" + firstName + "','" + lastName + "'," + dob + ",'" + email + "','" + password+"'" ;
-      let result = db.queryDatabase(buildQuery).then(function(dbResult)
+      let insertQuery = "INSERT INTO `EX_Fall_2020_Users`(`FirstName`, `LastName`, `email`, `password`, `User_Type`) VALUES ('"+FirstName + "','" + LastName + "','" + email + "','" + password + "'," + 6 + ")";
+      console.log(insertQuery)
+      db.queryDatabase(insertQuery).then(function(dbResult)
       {
         if(dbResult.affectedRows > 0){ //means that a row was made. value should be 1
           //console.log(dbResult)

@@ -2,7 +2,7 @@
   <div>
     <div class="field">
       <p class="control has-icons-left">
-        <input v-model="firstName" class="input" type="firstName" placeholder="First Name" />
+        <input v-model="FirstName" class="input" type="firstName" placeholder="First Name" />
         <span class="icon is-small is-left">
           <i class="fas fa-pencil-alt"></i>
         </span>
@@ -10,15 +10,7 @@
     </div>
     <div class="field">
       <p class="control has-icons-left">
-        <input v-model="lastName" class="input" type="lastName" placeholder="Last Name" />
-        <span class="icon is-small is-left">
-          <i class="fas fa-pencil-alt"></i>
-        </span>
-      </p>
-    </div>
-    <div class="field">
-      <p class="control has-icons-left">
-        <input v-model="dob" class="input" type="dob" placeholder="Date Of Birth" />
+        <input v-model="LastName" class="input" type="lastName" placeholder="Last Name" />
         <span class="icon is-small is-left">
           <i class="fas fa-pencil-alt"></i>
         </span>
@@ -55,17 +47,16 @@ import * as api from "@/controller/api";
 export default {
   data(){
     return {
-    firstName : '',
-    lastName : '',
-    dob: '',
+    FirstName : '',
+    LastName : '',
     password : '',
     email : '',
     }
   },
   methods: {
     signupSubmit: function () {
-      api.signup(this.firstName, this.LastName, this.dob, this.email, this.password).then(function (response) {
-        //return response;
+      api.signup(this.FirstName, this.LastName, this.email, this.password).then(function (response) {
+        console.log(response)
         if (response.data) {
           alert("sign up success");
         } else {
