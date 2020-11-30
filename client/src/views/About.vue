@@ -19,6 +19,21 @@
           See when and what type of yoga your friends are doing regularly.
         </p>
       </div>
+
+      <div class="container">
+        <h1 class="title">Contact Us</h1>
+        <h2 class="subtitle">
+          Follow us on our social medias: tag us in your yoga pics, we'll repost
+          it.
+        </h2>
+        <div class="notification has-background-grey-lighter">
+          <p>
+            Email: theyogatracker@gmail.com <br />
+            Instagram: @theyogatracker <br />
+            Twitter: @theyogatracker
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </template>

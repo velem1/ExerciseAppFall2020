@@ -22,9 +22,9 @@
             More
           </a>
           <div class="navbar-dropdown is-boxed">
-            <router-link to="/contact" >
+            <!-- <router-link to="/contact" >
               <a class="navbar-item">Contact Creator</a>
-            </router-link>
+            </router-link> -->
             <router-link to="/feedback" >
               <a class="navbar-item">Feedback</a>
             </router-link>
