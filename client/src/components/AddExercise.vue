@@ -1,5 +1,4 @@
 <template>
-<div class="section">
   <div class="container">
       <h1 class="title">
         <i class="fas fa-plus-square"></i>
@@ -11,7 +10,7 @@
           <label class="label">Yoga Type</label>
           <div class="control">
             <div class="select">
-              <select>
+              <select v-model="yoga_items.yoga_type">
                 <option>Vinyasa Yoga</option>
                 <option>Kundalini Yoga</option>
                 <option>Power Yoga</option>
@@ -25,19 +24,19 @@
         <div class="field">
           <label class="label">Pose(s)</label>
           <div class="control">
-            <input class="input" type="text" placeholder="Text input" />
+            <input class="input" type="text" placeholder="Text input" v-model="yoga_items.yoga_pose"/>
           </div>
         </div>
         <div class="field">
-          <label class="label">Duration of Pose (minutes)</label>
+          <label class="label">Duration (minutes)</label>
           <div class="control">
-            <input class="input" type="text" placeholder="Text input" />
+            <input class="input" type="text" placeholder="Text input" v-model="yoga_items.yoga_duration"/>
           </div>
         </div>
         <div class="field">
           <label class="label">Message</label>
           <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+            <textarea class="textarea" placeholder="Textarea" v-model="yoga_items.yoga_message"></textarea>
           </div>
         </div>
         <div class="field">
@@ -50,22 +49,36 @@
         </div>
         <div class="field">
           <div class="control">
-            <button onclick="alert();" class="button is-link">Submit</button>
+            <button value="Add" type="submit" @click="AddExercise" >Submit</button>
           </div>
+          <h1>Scroll down to see your posts!</h1>
         </div>
       </div>
-    </div>
-      <PersonalLog />
-    </div>
+  </div>
+  <br>
+  <PersonalLog />
 </template>
 
 <script>
-
-import PersonalLog from "../components/PersonalLog"
+import {yoga_items} from "@/models/YogaItems"
 export default {
   name: "AddExercise",
-  components: {
-    PersonalLog
-  },
+  data(){
+        return {
+            yoga_items
+        }
+    },
+    methods:{
+        AddExercise(){
+            this.yoga_items.push({
+                yoga_type:yoga_items.yoga_type,
+                yoga_pose:yoga_items.yoga_pose,
+                yoga_duration:yoga_items.yoga_duration,
+                yoga_message:yoga_items.yoga_message,
+
+            })
+        }
+    }
+
 };
 </script>

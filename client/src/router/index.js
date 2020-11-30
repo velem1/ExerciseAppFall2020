@@ -58,11 +58,11 @@ const routes = [
       import(/* webpackChunkName: "feedback" */ "../views/Feedback.vue"),
   },
   {
-    path: "/addexercise",
-    name: "AddExercise",
+    path: "/SubmitExercise",
+    name: "SubmitExercise",
 
     component: () =>
-      import(/* webpackChunkName: "addexercise" */ "../views/AddExercise.vue"),
+      import(/* webpackChunkName: "SubmitExercise" */ "../views/SubmitExercise.vue"),
   },
 ];
 

@@ -1,78 +1,50 @@
 <template>
-  <div id="yogaLog">
-    <div>
-      <h2 class="title">Personal Yoga Log</h2>
+  <h1 class="title">Personal Yoga Log</h1>
+  <article class="media" v-for= " (yoga_item,i) in yoga_items" :key="i">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="https://bulma.io/images/placeholders/128x128.png">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong class="title is-4" >Current User</strong> <small>@currentuser</small> <small>31m</small>
+        <br />
+          <strong>Yoga Type:</strong> {{yoga_item.yoga_type}} <br />
+          <strong>Yoga Pose:</strong> {{yoga_item.yoga_pose}} <br />
+          <strong>Duration:</strong> {{yoga_item.yoga_duration}} minutes <br />
+          <strong>Message:</strong> {{yoga_item.yoga_message}}
+        <br />
+      </p>
     </div>
-
-    <table class="table">
-
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Type</th>
-          <th scope="col text-right">Pose</th>
-          <th scope="col text-right">Duration</th>
-          <th scope="col text-right">Details</th>
-        </tr>
-      </thead>
-
-      <tbody>
-      <tr v-for="(yoga_input, k) in yoga_inputs" :key="k">
-        <td scope="row" class="trashIconContainer">
-          <i class="fas fa-trash-alt" @click="deleteRow(k, yoga_input)"></i>
-        </td>
-        <td>
-          <input class="form-control" type="text" v-model="yoga_input.yoga_type" />
-        </td>
-        <td>
-          <input class="form-control" type="text" v-model="yoga_input.yoga_pose" />
-        </td>
-        <td>
-          <input class="form-control text-right" type="number" min="0" step="1" v-model="yoga_input.yoga_duration" @change="calculateLineTotal(yoga_input)"
-          />
-        </td>
-        <td>
-          <input class="form-control" type="text" v-model="yoga_input.yoga_message" />
-        </td>
-      </tr>
-      </tbody>
-    </table>
-
-    <button class="button is-success" @click="addNewRow">
-      <i class="fas fa-plus-circle"></i>  
-      Add
-    </button>
-
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-edit"></i>Edit</span>
+        </a>
+      </div>
+    </nav>
   </div>
+  <div class="media-right">
+    <a class="has-text-danger" @click="deleteExercise(i)"><i class="fas fa-trash-alt" ></i></a>
+  </div>
+</article>
+  
 </template>
 
-<script> 
-  export default {
-    name: "yogaLog",
-    data: ()=> ({
-      yoga_inputs: [{
-        yoga_type: '',
-        yoga_pose: '',
-        yoga_duration: '',
-        yoga_message: '',
-      }]
-    }),
+<script>
+import {yoga_items} from "@/models/YogaItems";
+export default {
+    data(){
+         return {
+            yoga_items
+         }
+    },
     methods:{
-      addNewRow() {
-        this.yoga_inputs.push({
-          yoga_type: '',
-          yoga_pose: '',
-          yoga_duration: '',
-          yoga_message: '',
-        })
-      },
-      deleteRow(index, yoga_input) {
-        var idx = this.yoga_inputs.indexOf(yoga_input);
-        console.log(idx, index);
-        if (idx > -1) {
-          this.yoga_inputs.splice(idx, 1);
+        deleteExercise(i){
+            this.yoga_items.splice(i , 1);
         }
-      },
-    }
-  }
+    }  
+};
 </script>

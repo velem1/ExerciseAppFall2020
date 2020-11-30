@@ -5,15 +5,7 @@ var conn = mysql.createConnection({
   password: "GtG4Cb62TC",
   database: "sql9373703"
 })
-conn.connect(); //creates the database connection
-
-//let myquery = "SELECT * FROM `EX_Fall_2020_Users`";
-//   conn.query(myquery, function (error, results, fields) {  
-//       if (error) throw error;
-       //console.log(fields); 
-//       console.log(results);                         
-//       return results
-//     });
+conn.connect(); //database connection
 
 function queryDatabase(query){  //Will always use this method to query data. Just pass it SQL statement
     return new Promise(function(resolve, reject){
@@ -22,8 +14,7 @@ function queryDatabase(query){  //Will always use this method to query data. Jus
           console.log(error);
           reject();
         } 
-        //console.log(results);  //results come back as results
-                                //error comes back as errors
+
         resolve(results);
       });
     })
