@@ -49,6 +49,8 @@ export default {
           alert("user not found");
         }
       });
+      this.email="",
+      this.password=""
     },
   }
 }

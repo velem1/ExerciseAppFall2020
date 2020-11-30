@@ -63,6 +63,10 @@ export default {
           alert("sign up fail");
         }
       });
+      this.FirstName="",
+      this.LastName="",
+      this.email="",
+      this.password=""
     },
   }
 }
