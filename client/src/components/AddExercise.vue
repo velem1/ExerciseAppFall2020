@@ -77,6 +77,11 @@ export default {
                 yoga_message:yoga_items.yoga_message,
 
             })
+            this.yoga_items.yoga_type = "",
+            this.yoga_items.yoga_pose = "",
+            this.yoga_items.yoga_duration = "",
+            this.yoga_items.yoga_message = "",
+            alert("Workout added below!");
         }
     }
 
