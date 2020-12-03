@@ -92,7 +92,7 @@
 
 <script>
 //const data = require('@/data/sample.json')
-import * as api from "@/controller/api";
+//import * as api from "@/controller/api";
 export default {
     //data() {
     //    return {
