@@ -9,10 +9,12 @@
     "backend": "node ../server/index.js"
   },
   "dependencies": {
+    "buefy": "^0.9.4",
     "bulma": "^0.9.1",
     "core-js": "^3.6.5",
     "vue": "^3.0.0-0",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.0-0",
+    "vue-select": "^3.10.8"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

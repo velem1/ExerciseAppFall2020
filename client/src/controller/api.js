@@ -18,3 +18,13 @@ export function signup(FirstName, LastName, email, password){
     console.log(error)
   }
 }
+
+//export function autocomplete(FirstName, LastName){
+//  try {
+//    return axios.get(backend_url+"/autocomplete", {headers: {'searchtext': FirstName, 'searchtext': LastName}});
+     //
+//  } catch (error) {
+//    console.log(error)
+//  }
+
+//}

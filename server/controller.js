@@ -52,5 +52,23 @@ app.get('/signup', function(request, response){
   });
 })
 
+//Below is the function to search for users based on first name and last name
+//This grabs data from the user table (first name and last name columns)
+app.get('/autocomplete', function(request, response){  //we have connection between front end and backend
+  let searchtext = request.get('FirstName');
+  let searchtext = request.get('LastName');
+  //this grabs any data that matches what the user types into the textbox
+  let buildQuery = "SELECT * FROM `EX_Fall_2020_Users` WHERE FirstName = '" + searchtext + "' AND LastName = '" + searchtext + "'";
+  let result = db.queryDatabase(buildQuery).then(function(dbResult){
+    if(dbResult.length > 0){
+      console.log(dbResult)
+      response.send(true);
+    }
+    else{
+      response.send(false);
+    }      
+  });
+})
+
 
 module.exports = app;

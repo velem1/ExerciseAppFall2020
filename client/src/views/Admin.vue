@@ -1,5 +1,30 @@
 <template>
+<section>
+        <div class="select">
+  <select>
+    <option>USERS</option>
+    <option>Ariana Grande</option>
+    <option>AOC Congresswoman</option>
+    <option>Melissa Vele</option>
+    <option>Tom Hanks</option>
+  </select>
+</div>
+        <p class="content"><b>Selected:</b> {{ selected }}</p>
+        <b-field label="Find a JS framework">
+            <b-autocomplete
+                rounded
+                v-model="name"
+                :data="filteredDataArray"
+                placeholder="e.g. jQuery"
+                icon="magnify"
+                clearable
+                @select="option => selected = option">
+                <!--<template slot="empty">No results found</template>-->
+            </b-autocomplete>
+        </b-field>
+    </section>
   <div class="container is-fluid">
+
     <section class="section">
       <div class="container">
         <h1 class="title">Admin View</h1>
@@ -64,3 +89,39 @@
     </section>
   </div>
 </template>
+
+<script>
+//const data = require('@/data/sample.json')
+import * as api from "@/controller/api";
+export default {
+    //data() {
+    //    return {
+    //        data,
+    //        keepFirst: false,
+    //        openOnFocus: false,
+    //        name: '',
+    //        selected: null,
+    //        clearable: false
+    //    }
+    //},
+    data(){
+      return {
+        //this variable is what the user types into the search box
+        searchtext : '',
+    }
+    },
+    //method that allows for the grabbing data and displaying of the searched text
+    computed: {
+        filteredDataObj() {
+            return this.data.filter(option => {
+                return (
+                    option.user.first_name
+                        .toString()
+                        .toLowerCase()
+                        .indexOf(this.name.toLowerCase()) >= 0
+                )
+            })
+        }
+    }
+}
+</script>
